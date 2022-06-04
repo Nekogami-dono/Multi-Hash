@@ -14,18 +14,17 @@ sha256_hash = hashlib.sha256()
 sha512_hash = hashlib.sha512()
 sha3512_hash = hashlib.sha3_512()
 
-
 #Get File Input
 ptf = input("Path to File: ")
-
 
 #get file infos 
 file_name = os.path.basename(ptf)
 file_size = os.path.getsize(ptf)
 
+#tqdm progressbar
 with tqdm(total=file_size, unit='B', unit_scale=True, miniters=1, desc=os.path.basename(ptf), leave=False) as t:
     chunk_size = 65536
-    crcval = 0
+    crcval = 0 
     with open(ptf, "rb") as f:
         for chunk in iter(lambda: f.read(chunk_size), b""):
                 crcval = zlib.crc32(chunk, crcval)
