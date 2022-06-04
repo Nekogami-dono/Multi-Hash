@@ -10,6 +10,7 @@ pip install -r requirements.txt
 
 **Requirements:**
 [tqdm](https://github.com/tqdm/tqdm)
+
 [zlib](https://github.com/madler/zlib)
 
 **Sample hashlog.txt output:**
@@ -24,5 +25,9 @@ sha512: d610c692aad663431b1a955ffb01f94bd01f8b4e03cfb4bd17c82deed80725d916f4bc70
 sha3_512: e114a708153c1c388d5410a5660f98abecca21ad70781649c7c700d16c017195e38a848b8c0aa43a01a422d2bd5b0cf246b37ed43ddc8e65e1fd9435020fd52b
 ```
 
-
-
+**Todo:**
+- [ ] Add menu for selecting hash algorithm
+- [ ] Test on macOS and Linux
+- [ ] Add language support for log file creation
+- [ ] Add benchmark support
+- [ ] Publish Version 1.0 :tada:
