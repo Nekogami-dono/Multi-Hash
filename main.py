@@ -5,7 +5,7 @@ __version__ = "0.8.0"
 __status__ = "Beta"
 
 from tqdm import tqdm  
-import hashlib, os, zlib
+import hashlib, os, zlib, sys
 
 #Hashing Algorithms
 md5_hash = hashlib.md5()
@@ -15,7 +15,8 @@ sha512_hash = hashlib.sha512()
 sha3512_hash = hashlib.sha3_512()
 
 #Get File Input
-inptf = input("Path to File: ")
+inptf = sys.argv[1]
+#inptf = input("Path to File: ")
 ptf = inptf.strip()
 print(ptf)
 
@@ -57,5 +58,5 @@ print("sha3_512: " + sha3512_digest)
 
 
 #Create Log File
-with open("hashlog.txt", "w") as log:
+with open("hashlog.txt", "w+") as log:
     log.write("File: " + file_name + "\n" + "Size: " + str(file_size) + " byte" + "\n" + "CRC32: " + crc32_hash + "\n" + "md5: " + md5_digest + "\n" + "sha1: " + sha1_digest + "\n" + "sha256: " + sha256_digest + "\n" + "sha512: " + sha512_digest + "\n" + "sha3_512: " + sha3512_digest)

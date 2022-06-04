@@ -31,6 +31,7 @@ sha3_512: e114a708153c1c388d5410a5660f98abecca21ad70781649c7c700d16c017195e38a84
 
 **Todo:**
 - [ ] Add menu for selecting hash algorithm
+- [ ] Add hash-check verification
 - [ ] Add additional hash algorithm
 - [X] Add gif to Readme
 - [X] Test on macOS and Linux
