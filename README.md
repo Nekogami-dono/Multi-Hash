@@ -9,6 +9,7 @@
 pip install -r requirements.txt
 
 **Requirements:**
+
 [tqdm](https://github.com/tqdm/tqdm)
 
 [zlib](https://github.com/madler/zlib)
