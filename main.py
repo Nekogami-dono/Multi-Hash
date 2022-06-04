@@ -1,5 +1,7 @@
 #Multi Hash
-import hashlib, os
+from binascii import crc32
+import hashlib, os, zlib, sys
+
 #Hashing Algorithms
 md5_hash = hashlib.md5()
 sha1_hash = hashlib.sha1()
@@ -29,7 +31,11 @@ print("sha1: " + sha1_digest)
 print("sha256: " + sha256_digest)
 print("sha512: " + sha512_digest)
 
+#get file infos 
+file_name = os.path.basename(ptf)
+file_size = os.path.getsize(ptf)
+
+
 #Create Log File
 with open("hashlog.txt", "w") as log:
-    log.write("md5: " + md5_digest + "\n" + "sha1: " + sha1_digest)
-
+    log.write("File: " + file_name + "\n" + "Size: " + str(file_size) + " byte" + "\n" + "md5: " + md5_digest + "\n" + "sha1: " + sha1_digest + "\n" + "sha256: " + sha256_digest + "\n" + "sha512: " + sha512_digest)
