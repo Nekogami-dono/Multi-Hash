@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 hashlog.txt
 ideas
+.DS_Store

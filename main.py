@@ -17,6 +17,7 @@ sha3512_hash = hashlib.sha3_512()
 #Get File Input
 inptf = input("Path to File: ")
 ptf = inptf.strip()
+print(ptf)
 
 #get file infos 
 file_name = os.path.basename(ptf)
