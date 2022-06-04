@@ -1,5 +1,5 @@
 # Multi-Hash
-[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![Python 3.9](https://img.shields.io/badge/python-3.9-blue.svg)](https://www.python.org/downloads/release/python-390/) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Nekogami-dono/Multi-Hash)
 
 Create multiple hashes from file
 Supported hashing algorithms:
