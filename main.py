@@ -1,4 +1,7 @@
 #Multi Hash
+
+#todo list adding CRC-32 
+
 from binascii import crc32
 import hashlib, os, zlib, sys
 
@@ -8,16 +11,16 @@ sha1_hash = hashlib.sha1()
 sha256_hash = hashlib.sha256()
 sha512_hash = hashlib.sha512()
 
+
 ptf = input("Path to File: ")
 
-#read file
-f = open(ptf, "rb")
-inputfile = f.read()
-
-md5_hash.update(inputfile)
-sha1_hash.update(inputfile)
-sha256_hash.update(inputfile)
-sha512_hash.update(inputfile)
+with open(ptf, "rb") as f:
+    file_hash = hashlib.md5()
+    while chunk := f.read(65536):
+        md5_hash.update(chunk)
+        sha1_hash.update(chunk)
+        sha256_hash.update(chunk)
+        sha512_hash.update(chunk)
 
 #hash to hex
 md5_digest = md5_hash.hexdigest()
