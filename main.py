@@ -6,9 +6,10 @@ sha1_hash = hashlib.sha1()
 sha256_hash = hashlib.sha256()
 sha512_hash = hashlib.sha512()
 
-#ptf = input("Path to File: ")
+ptf = input("Path to File: ")
+
 #read file
-f = open("test.png", "rb")
+f = open(ptf, "rb")
 inputfile = f.read()
 
 md5_hash.update(inputfile)
