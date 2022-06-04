@@ -1,5 +1,5 @@
 #Multi Hash
-import hashlib
+import hashlib, os
 #Hashing Algorithms
 md5_hash = hashlib.md5()
 sha1_hash = hashlib.sha1()
@@ -22,8 +22,14 @@ md5_digest = md5_hash.hexdigest()
 sha1_digest = sha1_hash.hexdigest()
 sha256_digest = sha256_hash.hexdigest()
 sha512_digest = sha512_hash.hexdigest()
+
 #print hash
 print("md5: " + md5_digest)
 print("sha1: " + sha1_digest)
 print("sha256: " + sha256_digest)
 print("sha512: " + sha512_digest)
+
+#Create Log File
+with open("hashlog.txt", "w") as log:
+    log.write("md5: " + md5_digest + "\n" + "sha1: " + sha1_digest)
+
