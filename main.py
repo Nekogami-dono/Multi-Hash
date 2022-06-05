@@ -1,8 +1,8 @@
 #Multi Hash
 __author__ = "Nekogami"
 __maintainer__ = "Nekogami"
-__version__ = "0.8.0"
-__status__ = "Beta"
+__version__ = "1.0.0"
+__status__ = "Production"
 
 from tqdm import tqdm  
 import hashlib, os, zlib, sys
