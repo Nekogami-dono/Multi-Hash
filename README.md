@@ -34,6 +34,6 @@ sha3_512: e114a708153c1c388d5410a5660f98abecca21ad70781649c7c700d16c017195e38a84
 - [ ] Add batch mode for multiple files
 - [X] Add gif to Readme
 - [X] Test on macOS and Linux
-- [ ] Publish version 1.0 :tada:
+- [X] Publish version 1.0 :tada:
 
 
