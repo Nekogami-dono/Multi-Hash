@@ -30,14 +30,10 @@ sha3_512: e114a708153c1c388d5410a5660f98abecca21ad70781649c7c700d16c017195e38a84
 ```
 
 **Todo:**
-- [ ] Add menu for selecting hash algorithm
 - [ ] Add hash-check verification
-- [ ] Add batch mode
-- [ ] Add additional hash algorithm
+- [ ] Add batch mode for multiple files
 - [X] Add gif to Readme
 - [X] Test on macOS and Linux
-- [ ] Add language support for log file creation
-- [ ] Add benchmark support
 - [ ] Publish version 1.0 :tada:
 
 
