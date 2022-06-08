@@ -1,7 +1,7 @@
 #Multi Hash
 __author__ = "Nekogami"
 __maintainer__ = "Nekogami"
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __status__ = "Production"
 
 from tqdm import tqdm  
@@ -23,6 +23,7 @@ print(ptf)
 #get file infos 
 file_name = os.path.basename(ptf)
 file_size = os.path.getsize(ptf)
+file_path = os.path.dirname(ptf)
 
 #tqdm progressbar
 with tqdm(total=file_size, unit='B', unit_scale=True, miniters=1, desc=os.path.basename(ptf), leave=False) as t:
@@ -58,5 +59,5 @@ print("sha3_512: " + sha3512_digest)
 
 
 #Create Log File
-with open("hashlog.txt", "w+") as log:
+with open(file_path + "/" + file_name + ".log", "w+") as log:
     log.write("File: " + file_name + "\n" + "Size: " + str(file_size) + " byte" + "\n" + "CRC32: " + crc32_hash + "\n" + "md5: " + md5_digest + "\n" + "sha1: " + sha1_digest + "\n" + "sha256: " + sha256_digest + "\n" + "sha512: " + sha512_digest + "\n" + "sha3_512: " + sha3512_digest)
